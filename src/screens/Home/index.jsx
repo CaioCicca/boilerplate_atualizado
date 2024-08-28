@@ -1,13 +1,15 @@
 import { View, Text, TouchableOpacity } from 'react-native'
 import { useNavigation } from '@react-navigation/native'
 
+import styles from './styles';
+
 export default function Home() {
   const navigation = useNavigation();
   return (
-    <View>
-      <Text>Home Screen</Text>
+    <View style={styles.container}>
+      <Text style={styles.title}>Home Screen</Text>
       <TouchableOpacity onPress={() => navigation.navigate("Contact")}>
-        <Text>Contact</Text>
+        <Text style={styles.text}>Contact</Text>
       </TouchableOpacity>
     </View>
   )
